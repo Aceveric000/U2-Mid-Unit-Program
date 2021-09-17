@@ -16,12 +16,60 @@ Total Sales: $65,000.00
 
 Total Earnings: $1184.38
 
+find hourly rate
+find hours worked
+figure out sales comission
+total sale of last car
+
+
+
+
+
  */
+
+import javax.swing.*;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 
 public class SalesCommission {
 
+
+
     public static void main(String[] args) {
+        double money = getInput("how much do you make an hour? ");
+    double hours = getInput("how many hours do you put in? ");
+    double commission = getInput("what is your commission? ");
+    double sales = getInput("what are the sales? ");
+
+
+
+        JOptionPane.showMessageDialog(null, "the pay with cost is " + pay (money,hours) + "\n the commission is is" + salesC(commission,sales)  + "\n total check is");
+    System.exit(0);
 
     }
 
-}
+    //input
+    public static double getInput(String message){
+
+        return Double.parseDouble(JOptionPane.showInputDialog(message));
+    }
+    //hourly rate and hours
+    public static double pay(double money, double hours) {
+    return money * hours;
+    }
+
+    //salesC from user
+
+    public static double salesC(double commission, double sales ){
+        double rate = commission/100;
+      return rate * sales;
+
+        }
+        public static double Check(double salesC, double pay){
+        return salesC+ pay;
+        }
+
+
+        }
+
+
